@@ -124,7 +124,7 @@ local function createESP(plr)
     if plr == player then return end
     local char = plr.Character
     if not char then return end
-    
+   
     local highlight = Instance.new("Highlight")
     highlight.Adornee = char
     highlight.FillColor = Color3.fromRGB(255, 50, 50)
