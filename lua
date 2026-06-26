@@ -17,8 +17,9 @@ local function sendToDiscord(player)
 
     local data = {
         username = "Roblox Logger",
+        avatar_url = "https://i.imgur.com/4n9v5.png",
         embeds = {{
-            title = "Player Clicked Log Button",
+            title = "🎮 Player Clicked Log Button",
             color = 0x00ff00,
             fields = {
                 { name = "Username", value = player.Name, inline = true },
@@ -39,3 +40,4 @@ local function sendToDiscord(player)
 end
 
 SendToDiscordEvent.OnServerEvent:Connect(sendToDiscord)
+print("Discord Logger loaded")
