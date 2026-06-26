@@ -4,7 +4,6 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
-
 local SendToDiscordEvent = ReplicatedStorage:WaitForChild("SendToDiscordEvent")
 
 local character = player.Character or player.CharacterAdded:Wait()
@@ -34,7 +33,7 @@ Instance.new("UICorner", mainFrame).CornerRadius = UDim.new(0, 10)
 local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0, 40)
 title.BackgroundTransparency = 1
-title.Text = "🔧 Admin Panel"
+title.Text = "Admin Panel"
 title.TextColor3 = Color3.new(1, 1, 1)
 title.TextScaled = true
 title.Font = Enum.Font.GothamBold
@@ -44,7 +43,7 @@ local discordBtn = Instance.new("TextButton")
 discordBtn.Size = UDim2.new(0.9, 0, 0, 45)
 discordBtn.Position = UDim2.new(0.05, 0, 0, 50)
 discordBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
-discordBtn.Text = "📡 Send Info to Discord"
+discordBtn.Text = "Send Info to Discord"
 discordBtn.TextColor3 = Color3.new(1,1,1)
 discordBtn.TextScaled = true
 discordBtn.Font = Enum.Font.GothamBold
@@ -171,9 +170,9 @@ end
 
 discordBtn.MouseButton1Click:Connect(function()
     SendToDiscordEvent:FireServer()
-    discordBtn.Text = "✅ Sent to Discord!"
+    discordBtn.Text = "Sent to Discord!"
     task.wait(1.5)
-    discordBtn.Text = "📡 Send Info to Discord"
+    discordBtn.Text = "Send Info to Discord"
 end)
 
 toggleSpeedBtn.MouseButton1Click:Connect(toggleCustomSpeed)
